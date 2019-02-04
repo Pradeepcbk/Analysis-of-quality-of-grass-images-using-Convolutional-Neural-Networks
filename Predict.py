@@ -30,10 +30,10 @@ def predict(network, dataSet):
             img3 = np.expand_dims(img1, axis = 0)
             img2 = img3/255
             classes = network.predict_classes(img2)
-            temp = [x,y,(int)(classes[0])]
+            valueInExcel = [x,y,(int)(classes[0])]
             sheet.write(row, xColumn, x)
             sheet.write(row, yColumn, y)
-            sheet.write(row,valueColumn, temp[2])
+            sheet.write(row,valueColumn, valueInExcel[2])
             itr = itr + 1
 # =============================================================================
 #         column = column + 3
